@@ -1,0 +1,7 @@
+<!-- Shorthand syntax: -->
+<p class="data-view" *select="let data from 'https://jsonplaceholder.typicode.com/posts/1'">The data is: {{data}}</p>
+
+<!-- Long-form syntax: -->
+<ng-template select let-data [selectFrom]="'https://jsonplaceholder.typicode.com/posts/2'">
+  <p class="data-view">The data is: {{data}}</p>
+</ng-template>
