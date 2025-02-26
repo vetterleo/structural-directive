@@ -11,4 +11,5 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SelectComponent {
 
+  // https://angular.dev/guide/directives/structural-directives
 }

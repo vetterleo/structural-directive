@@ -9,7 +9,7 @@ export class SelectDirective implements OnInit {
 
   @Input({required: true}) selectFrom!: any;
 
-  constructor(private templateRef: TemplateRef<any>,
+  constructor(private templateRef: TemplateRef<unknown>,
               private viewContainerRef: ViewContainerRef,
               private http: HttpClient) {}
 

@@ -1,0 +1,18 @@
+<div class="div">
+  <span>User is</span>
+  <mat-checkbox (change)="setAdmin($event.checked)">Admin</mat-checkbox>
+  <mat-checkbox>MANAGER</mat-checkbox>
+  <mat-checkbox>READER</mat-checkbox>
+  <mat-checkbox>WRITER</mat-checkbox>
+  <mat-checkbox>CLIENT</mat-checkbox>
+</div>
+
+
+
+
+<div *hasRole="'ADMIN';user:user">visible only for super admin</div>
+<div *hasRole="'MANAGER';user:user">visible if manager</div>
+<div *hasRole="['MANAGER', 'READER'];user:user">visible if manager and/or reader</div>
+<div *hasRole="['MANAGER', 'WRITER'];user:user">visible if manager and/or writer</div>
+<div *hasRole="'CLIENT';user:user">visible if client</div>
+<div>visible for everyone</div>
